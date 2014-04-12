@@ -7,14 +7,7 @@ define(function (require) {
         // Initialize the activity.
         activity.setup();
 
-	pygame_init_camera();
 
-	stop_camera();
-
-	while(1)
-	{
-            pygame_image_stream();
-	}
 
         pygame_init_camera = function () {
             activity.init_camera(function (error, result) {
@@ -36,7 +29,14 @@ define(function (require) {
             });
         };
 
+	pygame_init_camera();
 
+	stop_camera();
+
+	while(1)
+	{
+            pygame_image_stream();
+	}
 /*
 
 

@@ -32,9 +32,7 @@ define(function (require) {
 
         stop_camera = function () {
             activity.stop_camera(function (error, result) {
-                
 		alert("Reached here 3");
-
             });
         };
 
