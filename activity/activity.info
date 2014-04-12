@@ -1,6 +1,6 @@
 [Activity]
-name = cordova_camera
+name = camera_webactivity
 activity_version = 1
-bundle_id = org.sugarlabs.cordova_camera
+bundle_id = org.sugarlabs.camera_webactivity
 exec = sugar-activity-web
 icon = activity-icon
