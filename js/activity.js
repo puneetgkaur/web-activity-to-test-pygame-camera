@@ -7,29 +7,36 @@ define(function (require) {
         // Initialize the activity.
         activity.setup();
 
-        function pygame_image_stream () {
-var result;
-            activity.get_cam_image(function (result1,boolBinary) {
+
+        pygame_init_camera = function () {
+            activity.init_camera(function (error,result) {
+		alert("init"+result.toString());
+            });
+        };
+
+        pygame_image_stream = function () {
+            activity.get_cam_image(function (result1,binary) {
                 web_cam_output.src=result1;
-		console.log("first:");
-		console.log(result1);
-		console.log("second:");
-		console.log(boolBinary);
+console.log("Reached Here2");
 		//alert("Reached here 2");
 		//alert(result);
             });
         };
 
-	activity.init_camera();
+        stop_camera = function () {
+            activity.stop_camera(function (error,result) {
+		console.log("stop function");
+            });
+        };
 
-	
+	pygame_init_camera();
 
 	while(1)
 	{
             pygame_image_stream();
 	}
 
-	activity.stop_camera();
+	stop_camera();
 /*
 
 
